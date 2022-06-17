@@ -26,4 +26,5 @@ public class LoginSteps implements CommonPage {
     public void verifyTitleOfThePageIs(String text) {
         Assert.assertEquals(WebDriverManager.getDriver().getTitle(), text);
     }
+
 }
