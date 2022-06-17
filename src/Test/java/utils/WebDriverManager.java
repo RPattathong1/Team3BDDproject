@@ -121,5 +121,11 @@ public class WebDriverManager {
         SeleniumUtils.waitForElementClickability(element);
         return element.isEnabled();
     }
+    public static boolean isEnabled(By by){
+        SeleniumUtils.moveIntoView(getDriver().findElement(by));
+        SeleniumUtils.highlightElement(getDriver().findElement(by));
+        SeleniumUtils.waitForElementClickability(getDriver().findElement(by));
+        return getDriver().findElement(by).isEnabled();
+    }
 
 }
