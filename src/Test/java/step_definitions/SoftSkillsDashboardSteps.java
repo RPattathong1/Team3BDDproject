@@ -1,14 +1,15 @@
 package step_definitions;
 
 import pages.CodingDashboardPage;
-import pages.SoftSkillDashboardPage;
+import pages.SoftSkillsDashboardPage;
 
 public class SoftSkillsDashboardSteps {
-    SoftSkillDashboardPage softSkillDashboardPage;
-
+    SoftSkillsDashboardPage softSkillDashboardPage;
+    CodingDashboardPage codingDashboardPage;
 
     public SoftSkillsDashboardSteps(){
-        softSkillDashboardPage = new SoftSkillDashboardPage();
+        softSkillDashboardPage = new SoftSkillsDashboardPage();
+        codingDashboardPage = new CodingDashboardPage();
     }
 
 }
