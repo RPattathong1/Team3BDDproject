@@ -8,7 +8,6 @@ import utils.WebDriverManager;
 public class CodingDashboardPage {
     private static CodingDashboardPage page;
     public CodingDashboardPage(){
-
         PageFactory.initElements(WebDriverManager.getDriver(), this);
     }
     @FindBy(xpath = "//button[@class='btn btn-sm-outline-warning'][last()]")
