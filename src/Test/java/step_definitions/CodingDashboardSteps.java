@@ -82,5 +82,4 @@ public class CodingDashboardSteps<txt> implements CommonPage {
     public void verifyQuestionWasAdded(String question) {
         Assert.assertTrue(WebDriverManager.isDisplayed(By.xpath(String.format(XPATH_TEMPLATE_TEXT, question))));
     }
-
 }
