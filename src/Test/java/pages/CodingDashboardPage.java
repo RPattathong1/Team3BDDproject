@@ -10,6 +10,9 @@ public class CodingDashboardPage {
     public CodingDashboardPage(){
         PageFactory.initElements(WebDriverManager.getDriver(), this);
     }
+    @FindBy(id = "question")
+    public WebElement questionTxtBox;
+
     @FindBy(xpath = "//button[@class='btn btn-sm-outline-warning'][last()]")
     public WebElement editIcon;
 
