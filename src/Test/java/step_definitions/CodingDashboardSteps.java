@@ -64,4 +64,23 @@ public class CodingDashboardSteps<txt> implements CommonPage {
 
         Assert.assertFalse(editedTxt,false);
     }
+
+    @When("User clicks on Enter new question button")
+    public void userClicksOnEnterNewQuestionButton(String btn) {
+        WebDriverManager.click(By.xpath(String.format(XPATH_TEMPLATE_BUTTON, btn)));
+    }
+    @And("User enters question in text box")
+    public void userEntersQuestionInTextBox() {
+        inputTxt = "Do you like Java?";
+        WebDriverManager.sendKeys(codingDashboardPage.questionTxtBox, inputTxt);
+    }
+    @And("User clicks Enter button")
+    public void userClicksEnterButton(String btn) {
+        WebDriverManager.click(By.xpath(String.format(XPATH_TEMPLATE_BUTTON, btn)));
+    }
+    @Then("Verify question was added")
+    public void verifyQuestionWasAdded(String question) {
+        Assert.assertTrue(WebDriverManager.isDisplayed(By.xpath(String.format(XPATH_TEMPLATE_TEXT, question))));
+    }
+
 }
