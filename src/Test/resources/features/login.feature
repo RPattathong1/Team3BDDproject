@@ -1,6 +1,7 @@
 @loginScenarios
 Feature: Login page tests
 
+  @US-1
   Scenario: Verify title of the page Interview App
     When User enters following credentials:
     | Enter Username | test@yahoo.com |
